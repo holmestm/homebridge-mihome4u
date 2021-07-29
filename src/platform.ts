@@ -140,6 +140,7 @@ export class MiHomePlatform implements DynamicPlatformPlugin {
             switch (device.device_type.toString().toLowerCase()) {
               case 'light':
               case 'control':
+              case 'legacy':
                 new MiHomePlug(this, accessory);
                 this.api.registerPlatformAccessories(PLUGIN_NAME, PLATFORM_NAME, [accessory]);
                 this.accessories.push(accessory);
